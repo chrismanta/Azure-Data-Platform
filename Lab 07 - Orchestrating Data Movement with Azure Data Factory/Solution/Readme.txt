@@ -1,1 +1,0 @@
-There are no labfiles in this folder
