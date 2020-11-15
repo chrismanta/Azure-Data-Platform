@@ -7,15 +7,9 @@ CREATE MASTER KEY;
 
 -- B: Create a database scoped credential
 -- IDENTITY: Provide any string, it is not used for authentication to Azure storage.
--- SECRET: Provide your Azure storage account key.
 
-
-CREATE DATABASE SCOPED CREDENTIAL AzureStorageCredential
-WITH
-    IDENTITY = 'MOCID',
-    SECRET = 'uKqRan5htV8q4oD/O+SAxQboL5MN8LhmjEZQ2ivjKOrOorQzLi33gH+C1m4ffqTcGNQN9PMluWmSYeXD/wBQhQ=='
-;
-
+CREATE DATABASE SCOPED CREDENTIAL AzureStorageCredential WITH IDENTITY = 'Managed Service Identity';
+GO
 
 -- C: Create an external data source
 -- TYPE: HADOOP - PolyBase uses Hadoop APIs to access data in Azure blob storage.
@@ -25,7 +19,7 @@ WITH
 CREATE EXTERNAL DATA SOURCE AzureStorage
 WITH (
     TYPE = HADOOP,
-    LOCATION = 'wasbs://data@awsastudcto.blob.core.windows.net',
+    LOCATION = 'abfss://data@awdlsstudmw.blob.core.windows.net',
     CREDENTIAL = AzureStorageCredential
 );
 
@@ -48,21 +42,21 @@ WITH (
 -- To point to all files under the blob container, use LOCATION='.'
 
 CREATE EXTERNAL TABLE dbo.DimDate2External (
-	[Date] datetime2(3) NULL,
-	[DateKey] decimal(38, 0) NULL,
-	[MonthKey] decimal(38, 0) NULL,
-	[Month] nvarchar(100) NULL,
-	[Quarter] nvarchar(100) NULL,
-	[Year] decimal(38, 0) NULL,
-	[Year-Quarter] nvarchar(100) NULL,
-	[Year-Month] nvarchar(100) NULL,
-	[Year-MonthKey] nvarchar(100) NULL,
-	[WeekDayKey] decimal(38, 0) NULL,
-	[WeekDay] nvarchar(100) NULL,
-	[Day Of Month] decimal(38, 0) NULL
+    [Date] datetime2(3) NULL,
+    [DateKey] decimal(38, 0) NULL,
+    [MonthKey] decimal(38, 0) NULL,
+    [Month] nvarchar(100) NULL,
+    [Quarter] nvarchar(100) NULL,
+    [Year] decimal(38, 0) NULL,
+    [Year-Quarter] nvarchar(100) NULL,
+    [Year-Month] nvarchar(100) NULL,
+    [Year-MonthKey] nvarchar(100) NULL,
+    [WeekDayKey] decimal(38, 0) NULL,
+    [WeekDay] nvarchar(100) NULL,
+    [Day Of Month] decimal(38, 0) NULL
 )
 WITH (
-    LOCATION='/',
+    LOCATION='/DimDate2.txt',
     DATA_SOURCE=AzureStorage,
     FILE_FORMAT=TextFile
 );
