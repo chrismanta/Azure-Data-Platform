@@ -8,8 +8,7 @@ CREATE MASTER KEY;
 -- B: Create a database scoped credential
 -- IDENTITY: Provide any string, it is not used for authentication to Azure storage.
 
-CREATE DATABASE SCOPED CREDENTIAL AzureStorageCredential WITH IDENTITY = 'Managed Service Identity';
-GO
+CREATE DATABASE SCOPED CREDENTIAL AzureStorageCredential WITH IDENTITY = 'MOCID', SECRET = 'Your storage account key';
 
 -- C: Create an external data source
 -- TYPE: HADOOP - PolyBase uses Hadoop APIs to access data in Azure blob storage.
@@ -19,7 +18,7 @@ GO
 CREATE EXTERNAL DATA SOURCE AzureStorage
 WITH (
     TYPE = HADOOP,
-    LOCATION = 'abfss://data@awdlsstudmw.blob.core.windows.net',
+    LOCATION = 'abfss://data@awdlsstudxx.blob.core.windows.net',
     CREDENTIAL = AzureStorageCredential
 );
 
