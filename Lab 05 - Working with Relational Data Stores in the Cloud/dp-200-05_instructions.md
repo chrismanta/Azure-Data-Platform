@@ -9,7 +9,7 @@
 
 ## Lab overview
 
-The students will be able to provision an Azure SQL Database and Azure Synapse Analytics server and be able to issue queries against one of the instances that are created. They will be also be able to integrate a data warehouse with a number of other data platform technologies and use PolyBase to load data from one data source into Azure Synapse Analytics.
+The students will be able to provision an Azure SQL Database and Azure Synapse Analytics workspace and be able to issue queries against one of the instances that are created. They will be also be able to integrate a data warehouse with a number of other data platform technologies and use PolyBase to load data from one data source into Azure Synapse Analytics.
 
 ## Lab objectives
   
@@ -17,14 +17,14 @@ After completing this lab, you will be able to:
 
 1. Use Azure SQL Database
 1. Describe Azure Synapse Analytics 
-1. Create and query Azure Synapse Analytics 
+1. Create Azure Synapse Analytics 
 1. Use PolyBase to load data into Azure Synapse Analytics 
 
 ## Scenario
   
 You are the senior data engineer at AdventureWorks, and you are working with your team to transition a relational database system from an on-premises SQL Server to a Azure SQL Database located in Azure. You will begin by creating an instance of Azure SQL Database with the company's sample database. Your intention is to hand this instance of to a junior data engineer to perform some testing of departmental databases.
 
-You will then provision Azure Synapse Analytics server and test that the provisioning of the server is successful by testing a sample database with a series of queries. You will then use PolyBase to load a dimension table from Azure Blob to test that the integration of this data platform technology with Azure Synapse Analytics.
+You will then provision Azure Synapse Analytics server and test that the provisioning of the server is successful. You will then use PolyBase to load a dimension table from Azure Blob to test that the integration of this data platform technology with Azure Synapse Analytics.
 
 At the end of this lad, you will have:
 
