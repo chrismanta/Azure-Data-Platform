@@ -105,8 +105,6 @@ The main tasks for this exercise are as follows:
 
 1. Create and configure a Azure Synapse Analytics instance.
 
-1. Configure the Server Firewall
-
 1. Pause the warehouse database
 
 ### Task 1: Create and configure a Azure Synapse Analytics instance.
@@ -147,7 +145,7 @@ The main tasks for this exercise are as follows:
 
     > **Note**: The provision will takes approximately 3 minutes.
 
-### Task 3: Create dedicated SQL pool 
+### Task 2: Create dedicated SQL pool 
 
 1. In the Azure portal, in the blade, click **Resource groups**, and then click **awrgstudxx**, and then click on **awswstudxx**, where **xx** are your initials
 
@@ -163,15 +161,6 @@ The main tasks for this exercise are as follows:
 1. In the **Review + create** screen, click **Create**.
 
     > **Note**: The provision will takes approximately 3 minutes.
-
-### Task 4: Pause the Warehousexx database
-
-1. Click on **Warehousexx**, where **xx** are your initials.
-
-1. In the **Warehousexx (dwhservicexx/Warehousexx)** screen, click on **Pause**.
-
-1. In the Pause Warehousexx screen, click **Yes**
-
 ## Exercise 3: Creating an Azure Synapse Analytics database and tables
 
 Estimated Time: 25 minutes
@@ -250,6 +239,8 @@ The main tasks for this exercise are as follows:
 
 1. Create a dbo.Dates table using PolyBase from Azure Data Lake Storage
 
+1. Pause the **dwhservicexx** database
+
 ### Task 1: Collect Azure Blob account name and key details
 
 1. In the Azure portal, click on **Resource groups** and then click on **awrgstudxx**, and then click on **awdlsstudxx** where xx are the initials of your name.
@@ -285,7 +276,7 @@ The main tasks for this exercise are as follows:
     WITH
     IDENTITY = 'MOCID',
     SECRET = 'Your storage account key'
-;
+    ;
     ```
 
 1. In the **Sql script** editor, highlight both statements and then click on **Run**.
@@ -388,3 +379,12 @@ The main tasks for this exercise are as follows:
     ```SQL
     SELECT * FROM dbo.Dates;
     ```
+### Task 3: Pause the dwhservicexx database
+
+1. In Synapse Studio, navigate to the **Manage** menu.
+
+1. Under **Analytics pools**, select **SQL pools**.
+
+1. Hover over on **dwhservicexx**, where **xx** are your initials, then click the **Pause** icon.
+
+1. In the Pause **dwhservicexx** screen, click **Yes**
