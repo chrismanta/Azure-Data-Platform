@@ -27,7 +27,7 @@ As a senior data engineer within AdventureWorks, you are responsible for ensurin
 
 You have also been asked to tighten up the security of the SQL Database DeptDatabasesxx and have been asked to setup auditing against the database so that you can monitor access to the database. Furthermore, you have learned that that the Manage permission for your event hub is not restrictive enough, and you want to remove this permission.
 
-At the end of this lad, you will have:
+At the end of this lab, you will have:
 
 1. Explained Security
 1. Described key security components
@@ -75,9 +75,7 @@ The main tasks for this exercise are as follows:
 
     ![Security Center in the Azure Portal](Images/M08-E01-T01-img01.png)
 
-1. In the Security Center - Overview screen, under **Resource Security Hygiene**, click Data and Storage.
-
-    ![Security Center - Data Storage in the Azure Portal](Images/M08-E01-T01-img02.png)
+1. In the Security Center - click **Recommendations**.
 
 1. Identify the top two key data and storage components that require attention.
 
@@ -126,11 +124,9 @@ The main tasks for this exercise are as follows:
 
 ### Task 1: Enabling Auditing
 
-1. In the Azure portal, in the blade, click **Resource groups**, and then click **awrgstudxx**, and then click on **awdlsstudxx**, where **xx** are your initials
+1. In the Azure portal, in the blade, click **Resource groups**, and then click **awrgstudxx**, and then click on **AdventureWorksLT**.
 
-1. In the Azure portal, in the blade, click Resource groups, and then click awrgstudxx, and then click on **AdventureWorksLT**.
-
-1. In the deptdatabasesxx (sqlservicexx/AdventureWorksLT) screen, click on the **Auditing** blade.
+1. In the AdventureWorksLT screen, click on the **Auditing** blade.
 
 1. Under **Auditing**, click on the **ON** button.
 
@@ -140,17 +136,27 @@ The main tasks for this exercise are as follows:
 
 1. In the **Storage Setting** screen, click **Subscription - change storage subscription**, and then click your subscription.
 
-1. In the **Storage Setting** screen, click **Storage Settings - Configure required settings**. In the **Choose storage account** screen, click **awsastudxx**
+1. In the **Storage Setting** screen, click **Storage Settings - Configure required settings**. In the **Choose storage account** screen, click **+ Create New**
 
-1. In the **Retention Days** text box, type **90**, and then click on **OK**.
+1. In **Create storage account** enter Name **awrgauditxx**, where **xx** are your initials.
+
+1. Select **Primary** for the **Storage access key** option.
+
+1. Click **OK** to create the storage account.  
+
+1. In the Storate settings scree, under **Retention Days**, type **90**, and then click on **OK**.
 
     ![Configuring Auditing in the Azure Portal](Images/M08-E04-T01-img01.png)
 
-1. Click on **Save**.
+1. Click on **OK**.
+
+1. Back at the **AdventureWorksLT | Auditing**, click **Save**
+
+1. Once successfully saved you should see a dialog that the settings are updated, Click **Ok** to dismiss.
 
 ### Task 2: Query the database
 
-1. On the windows desktop, click on the **Start**, and type **"SQL Server"** and then click on **MIcrosoft SQL Server Management Studio 17**
+1. On the windows desktop, click on the **Start**, and type **"SQL Server"** and then click on **MIcrosoft SQL Server Management Studio 17**.  Alternatively, querying can be completed in **Azure Data Studio**
 
 1. In the **Connect to Server** dialog box, fill in the following details
     - Server Name: **sqlservicexx.database.windows.net**
@@ -170,7 +176,7 @@ The main tasks for this exercise are as follows:
 
 ### Task 2: View the Audit Log
 
-1. Return to the Azure Portal. In the AdventureWorksLT (sqlservicexx/AdventureWorksLT) - Auditing screen, click on **View Audit Logs**
+1. Return to the Azure Portal. In the AdventureWorksLT - Auditing screen, click on **View Audit Logs**
 
 1. Note in the **Audit records** log file the **Failed Authentication** record. Close down the **Audit records** screen
 
