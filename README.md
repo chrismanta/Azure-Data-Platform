@@ -2,7 +2,8 @@
 
  During this course, the first and the last lab of the course are group exercises that involve discussion to help provide context for the labs that the students will take. The last lab provides the opportunity for the students to reflect on what they have achieved and what they have overcome to achieve the delivery of requirements from the case study in the labs. The rest of the labs are hands on implementing Azure data platform capabilities to meet AdventureWorks business requirements.
 
- [Case Study](course-case-study.md)
+ - [Case Study](course-case-study.md)
+ - [Prerequisites](prerequisites.md)
 
 The following is a summary of the lab objectives for each module:
 
