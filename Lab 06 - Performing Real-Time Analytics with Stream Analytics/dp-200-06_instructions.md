@@ -24,9 +24,9 @@ After completing this lab, you will be able to:
   
 As part of the digital transformation project, you have been tasked by the CIO to help the customer services departments identify fraudulent calls. Over the last few years the customer services departments have observed an increase in calls from fraudulent customer who are asking for support for bikes that are no longer in warranty, or bikes that have not even been purchased at AdventureWorks. 
 
-The department are currently relying on the experience of customer services agents to identify this. As a result, they would like to implement a system that can help the agents track in real-time who could be making a fradulent claim.
+The departments are currently relying on the experience of customer services agents to identify this. As a result, they would like to implement a system that can help the agents track in real-time who could be making a fradulent claim.
 
-At the end of this lad, you will have:
+At the end of this lab, you will have:
 
 1. Explained data streams and event processing
 1. Ingested data with Event Hubs
