@@ -1,0 +1,53 @@
+# This is an automatically generated file
+items:
+- name: DP 200 Implementing an Azure Data Solution
+  href: README.md
+- name: Case Study – AdventureWorks Cycles
+  href: course-case-study.md
+- name: Lab 01   Azure for the Data Engineer
+  href: Lab 01 - Azure for the Data Engineer/dp-200-01_instructions.md
+  items:
+  - name: DP 200   Implementing a Data Platform Solution
+    href: Lab 01 - Azure for the Data Engineer/dp-200-01_instructions.md
+- name: Lab 02   Working with Data Storage
+  href: Lab 02 - Working with Data Storage/dp-200-02_instructions.md
+  items:
+  - name: DP 200   Implementing a Data Platform Solution
+    href: Lab 02 - Working with Data Storage/dp-200-02_instructions.md
+- name: Lab 03   Enabling Team Based Data Science with Azure Databricks
+  href: Lab 03 - Enabling Team Based Data Science with Azure Databricks/dp-200-03_instructions.md
+  items:
+  - name: DP 200   Implementing a Data Platform Solution
+    href: Lab 03 - Enabling Team Based Data Science with Azure Databricks/dp-200-03_instructions.md
+- name: Lab 04   Building Globally Distributed Databases with Cosmos DB
+  href: Lab 04 - Building Globally Distributed Databases with Cosmos DB/dp-200-04_instructions.md
+  items:
+  - name: DP 200   Implementing a Data Platform Solution
+    href: Lab 04 - Building Globally Distributed Databases with Cosmos DB/dp-200-04_instructions.md
+- name: Lab 05   Working with Relational Data Stores in the Cloud
+  href: Lab 05 - Working with Relational Data Stores in the Cloud/dp-200-05_instructions.md
+  items:
+  - name: DP 200   Implementing a Data Platform Solution
+    href: Lab 05 - Working with Relational Data Stores in the Cloud/dp-200-05_instructions.md
+- name: Lab 06   Performing Real Time Analytics with Stream Analytics
+  href: Lab 06 - Performing Real-Time Analytics with Stream Analytics/dp-200-06_instructions.md
+  items:
+  - name: DP 200   Implementing a Data Platform Solution
+    href: Lab 06 - Performing Real-Time Analytics with Stream Analytics/dp-200-06_instructions.md
+- name: Lab 07   Orchestrating Data Movement with Azure Data Factory
+  href: Lab 07 - Orchestrating Data Movement with Azure Data Factory/dp-200-07_instructions.md
+  items:
+  - name: DP 200   Implementing a Data Platform Solution
+    href: Lab 07 - Orchestrating Data Movement with Azure Data Factory/dp-200-07_instructions.md
+- name: Lab 08   Securing Azure Data Platforms
+  href: Lab 08 - Securing Azure Data Platforms/dp-200-08_instructions.md
+  items:
+  - name: DP 200   Implementing a Data Platform Solution
+    href: Lab 08 - Securing Azure Data Platforms/dp-200-08_instructions.md
+- name: Lab 09   Monitoring and Troubleshooting Data Storage and Processing
+  href: Lab 09 - Monitoring and Troubleshooting Data Storage and Processing/dp-200-09_instructions.md
+  items:
+  - name: DP 200   Implementing a Data Platform Solution
+    href: Lab 09 - Monitoring and Troubleshooting Data Storage and Processing/dp-200-09_instructions.md
+- name: Prerequisites
+  href: prerequisites.md
