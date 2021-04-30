@@ -1,0 +1,25 @@
+---
+content:
+- files:
+    - "**/*.md"
+    - "**/*.yml"
+  exclude:
+    - "**/obj/**"
+resource:
+- files:
+  - "**/*.gif"
+  - "**/*.jpeg"
+  - "**/*.jpg"
+  - "**/*.png"
+  - "**/*.svg"
+  - "**/*.json"
+  - "**/*.tf"
+  - "**/*.pptx"
+  exclude:
+  - "**/obj/**"
+globalMetadata:
+  docfx:newtab: true
+  _appLogoPath: images/ais-logo-white-orange.png
+template: https://appliedis@dev.azure.com/appliedis/AIS%20Docs/_git/AIS%20Docs#users/vreddy/aisdocs-docfxv3-template
+outputType: html
+urlType: ugly
